@@ -1,0 +1,115 @@
+.testimonials {
+    margin: 80px auto;
+    padding: 0 80px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.next-btn, .back-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #470367;
+    color: white;
+}
+
+.back-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+.slider {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px; /* Increased the max-width to fit two testimonials */
+}
+
+.inner-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider ul {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    
+}
+
+.slide {
+    flex: 0 0 50%; /* Each slide takes up 50% of the container width */
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.user-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.user-info img {
+    border-radius: 50%;
+    margin-right: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+
+.user-info h3{
+    color: #470367;
+}
+
+/*---media---*/
+@media (max-width: 800px){
+    .testimonials{
+        padding: 0px 40px;
+        
+    }
+    .next-btn,.back-btn{
+        padding: 10px;
+        width: 35px;
+    }
+    .testimonials ul li{
+        padding: 10px;
+    }
+    .slide{
+        padding:10px;
+
+    }
+    .slide img{
+        
+        border: 3px solid #212EA0;
+    }
+}
+
+@media (max-width: 600px){
+    .user-info{
+        display: block;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+    .user-info h3{
+        font-size: 16px;
+
+    }
+    .slider p {
+        font-size: 12px;
+    }
+}
